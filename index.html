@@ -23,55 +23,61 @@
         <p>Thanks for completing the form. We'll be in touch soon!</p>
       </section>
 
-      <form id="form" class="main__contact--form">
-        <fieldset>
-          <legend>Contact Us</legend>
+      <form id="form" class="main__contact--form" novalidate>
+        <h2 class="form--heading">Contact Us</h2>
 
-          <section class="name--surname--container">
-            <div class="name--container">
-              <p><label for="name"> First Name</label></p>
-              <input type="text" required>
-              <div class="error">This field is required</div>
-            </div>
+        <section class="name--surname--container">
+          <div class="form--control name--container">
+            <label for="name" class="required">First Name</label>
+            <input type="text" id="name" name="firstName" class="field" required>
+            <div class="error"></div>
+          </div>
+            
+          <div class="form--control">
+            <label for="surname" class="required">Last Name</label>
+            <input type="text" id="surname" name="lastName" class="field" required>
+            <div class="error"></div>
+          </div>
+        </section>
 
-            <div class="surname--container">
-              <p><label for="surname"> Last Name</label></p>
-              <input type="text" required>
-              <div class="error">This field is required</div>
-            </div>
-          </section>
+        <div class="form--control">
+          <label for="email" class="required">Email Address</label>
+          <input type="email" id="email" name="email" class="field" required>
+          <div class="error hidden"></div>
+          
+        </div>
 
-          <p><label for=""> Email Address</label></p>
-          <input type="email" required>
-          <div class="error">Please enter a valid email address</div>
-          <div class="error">This field is required</div>
+        <div class="form--control">
+          <fieldset class="query--container">
+            <legend class="required">Query Type</legend>
+            <label class="radio">
+              <input type="radio" id="queryGeneral" name="queryType" value="general">
+              General Enquiry
+            </label>
 
-          <p><label for="queryType">Query Type</label></p>
-          <section class="query--container">
-            <section class="radio--container">
-              <input type="radio" required>
-              <span>General Enquiry</span>
-            </section>
+            <label class="radio required">
+              <input type="radio" id="querySupport" name="queryType" value="support">
+              Support Request
+            </label>
+          </fieldset>
+          <div class="error radioError"></div>
+        </div>
 
-            <section class="query--container">
-              <input type="radio" required>
-              <span>Support Request</span>
-            </section>
-            <div>Please select a query type</div>
-          </section>
+        <div class="form--control">
+          <label for="message" class="required">Message</label>
+          <textarea id="message" name="message" class="field" required></textarea>
+          <div class="error"></div>
+        </div>
 
-          <p><label for="message">Message</label></p>
-          <textarea name="message" id="message" required></textarea>
-          <div>This field is required</div>
-
-          <label for="consent" class="sr-only">Consent</label>
-          <input type="checkbox" required>
-          <span> I consent to being contacted by the team *</span>
-          <div>To submit this form, please consent to being contacted</div>
-
-        </fieldset>
-
-        <button type="submit">Submit</button>
+        <label for="consent">
+          <div class="consent--control">
+            <input type="checkbox" id="consent" name="consent" required>
+            <span class="required"> I consent to being contacted by the team</span>
+          </div>
+          <div class="error"></div>
+        </label>
+          
+        <button type="submit" class="submit--btn">Submit</button>
 
       </form>
 

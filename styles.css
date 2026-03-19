@@ -140,6 +140,14 @@ textarea:not([rows]) {
   input.field:hover {
     border: 0.095rem solid var(--clr-green-600);;
   }
+
+  label.radio:has(input[type="radio"]:checked) {
+    background-color: var(--clr-green-200);
+  }
+
+  label.consent--label:hover {
+    cursor: pointer;
+  }
 }
 
 body {
@@ -157,7 +165,7 @@ body {
 .form--container {
   width: 90%;
   max-width: 36rem;
-  margin-block: 5rem;
+  margin-block: 3rem;
 }
 
 .sr-only {
@@ -332,7 +340,7 @@ textarea {
 @media screen and (min-width: 48rem) {
   .form--container {
     width: 60%;
-    max-width: 40rem;
+    max-width: 50rem;
     padding: 1.5rem;
   }
 

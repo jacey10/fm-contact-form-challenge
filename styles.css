@@ -141,10 +141,6 @@ textarea:not([rows]) {
     border: 0.095rem solid var(--clr-green-600);;
   }
 
-  label.radio:has(input[type="radio"]:checked) {
-    background-color: var(--clr-green-200);
-  }
-
   label.consent--label:hover {
     cursor: pointer;
   }
@@ -250,6 +246,7 @@ fieldset {
 
 label, legend {
   color: var(--clr-grey-500);
+  font-size:  var(--fs-form-labels);
   font-weight: var(--fw-regular);
   margin-block-end: 0.5rem;
 }
@@ -289,12 +286,16 @@ input[type="radio"], input[type="checkbox"] {
   margin-inline-end: 0.5rem;
 }
 
+input[type="radio"]:checked, input[type="checkbox"]:checked {
+  accent-color: var(--clr-green-600);
+}
+
 input[type="checkbox"] {
   margin-block-start: -0.35rem;
 }
 
-input[type="radio"]:checked, input[type="checkbox"]:checked {
-  accent-color: var(--clr-green-600);
+label.radio:has(input[type="radio"]:checked) {
+  background-color: var(--clr-green-200);
 }
 
 textarea {
@@ -308,7 +309,7 @@ textarea {
 .error {
   margin-block-start: 0.3rem;
   color: var(--clr-red);
-  font-size: 0.8rem;
+  font-size: 0.89em;
 }
 
 .radio--error {
@@ -316,7 +317,7 @@ textarea {
 }
 
 .consent--error {
-  margin-block: -1.3rem 0.7rem;
+  margin-block: -1.15rem 0.7rem;
 }
 
 .consent--control {

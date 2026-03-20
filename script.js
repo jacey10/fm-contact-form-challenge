@@ -4,8 +4,8 @@ const nameErrorEl = document.getElementById('nameError');
 const surnameInput = document.getElementById('surname');
 const surnameErrorEl = document.getElementById('surnameError');
 const emailInput = document.getElementById('email');
-const queryErrorEl = document.getElementById('queryError');
 const emailErrorEl = document.getElementById('emailError');
+const queryErrorEl = document.getElementById('queryError');
 const messageText = document.getElementById('message');
 const messageErrorEl = document.getElementById('messageError');
 const consentErrorEl = document.getElementById('consentError');
@@ -142,4 +142,13 @@ function handleSubmit(e) {
 function showSuccess() {
     successPop.classList.remove('hidden');
     form.reset();
+
+    document.querySelectorAll('[aria-invalid="true"]').forEach(el => {
+        el.setAttribute('aria-invalid', 'false');
+        el.classList.remove('invalid');
+    });
+
+    setTimeout(() => {
+        successPop.classList.add('hidden');
+    }, 3000);
 }

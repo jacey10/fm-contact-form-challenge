@@ -13,6 +13,10 @@ const successPop = document.getElementById('popup');
 const form = document.getElementById('form');
 
 // ==== EVENT LISTENERS ==== //
+nameInput.addEventListener('input', () => validateName(nameInput, nameErrorEl));
+surnameInput.addEventListener('input', () => validateName(surnameInput, surnameErrorEl));
+emailInput.addEventListener('input', () => validateEmail(emailInput, emailErrorEl));
+messageText.addEventListener('input', () => validateMessage(messageText, messageErrorEl));
 form.addEventListener('submit', handleSubmit);
 
 // ==== FUNCTIONS ==== //
@@ -146,6 +150,10 @@ function showSuccess() {
     document.querySelectorAll('[aria-invalid="true"]').forEach(el => {
         el.setAttribute('aria-invalid', 'false');
         el.classList.remove('invalid');
+    });
+
+    document.querySelectorAll('[id$="Error"]').forEach(el => {
+        el.textContent = '';
     });
 
     setTimeout(() => {

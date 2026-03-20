@@ -15,7 +15,9 @@
 
     <main id="formContainer" class="form--container">
 
-      <div id="popup" class="success--popup hidden" role="alert">
+      <h1 class="sr-only">CONTACT FORM</h1>
+
+      <div id="popup" class="success--popup hidden" role="alert" aria-live="assertive" tabindex="-1">
         <div class="success--top--block">
           <img src="assets/icons/icon-success-check.svg" alt="">
           <p>Message Sent!</p>
@@ -30,20 +32,20 @@
           <div class="form--control name--container">
             <label for="name" class="required">First Name</label>
             <input type="text" id="name" name="firstName" class="field" aria-describedby="nameError" required>
-            <div id="nameError" class="error"></div>
+            <div id="nameError" class="error" aria-live="polite"></div>
           </div>
             
           <div class="form--control">
             <label for="surname" class="required">Last Name</label>
             <input type="text" id="surname" name="lastName" class="field" aria-describedby="surnameError" required>
-            <div id="surnameError" class="error"></div>
+            <div id="surnameError" class="error" aria-live="polite"></div>
           </div>
         </div>
 
         <div class="form--control">
           <label for="email" class="required">Email Address</label>
           <input type="email" id="email" name="email" class="field" aria-describedby="emailError" required>
-          <div id="emailError" class="error"></div>
+          <div id="emailError" class="error" aria-live="polite"></div>
         </div>
 
         <div class="form--control">
@@ -59,20 +61,20 @@
               Support Request
             </label>
           </fieldset>
-          <div id="queryError" class="error radio--error"></div>
+          <div id="queryError" class="error radio--error" aria-live="polite"></div>
         </div>
 
         <div class="form--control">
           <label for="message" class="required">Message</label>
           <textarea id="message" name="message" class="field" aria-describedby="messageError" required></textarea>
-          <div id="messageError" class="error"></div>
+          <div id="messageError" class="error" aria-live="polite"></div>
         </div>
 
         <div class="consent--control">
           <input type="checkbox" id="consent" name="consent" aria-describedby="consentError" required>
           <label for="consent" class="required consent--label">I consent to being contacted by the team</label>
         </div>
-        <div id="consentError" class="error consent--error"></div>
+        <div id="consentError" class="error consent--error" aria-live="polite"></div>
        
         <button type="submit" id="submitBtn" class="submit--btn">Submit</button>
       </form>

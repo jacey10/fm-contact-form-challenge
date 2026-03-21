@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Screenshot
 
-![](/assets/images/screenshots/form.png)
 ![](/assets/images/screenshots/form-2.png)
+![](/assets/images/screenshots/form.png)
 ![](/assets/images/screenshots/error-state.png)
 
 
